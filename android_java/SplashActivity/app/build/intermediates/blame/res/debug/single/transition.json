@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/ivanlmj/git/Android-SplashActivity/SplashActivity/app/build/intermediates/res/merged/debug/transition/fade_in.xml",
+        "source": "/home/ivanlmj/git/Android-SplashActivity/SplashActivity/app/src/main/res/transition/fade_in.xml"
+    },
+    {
+        "merged": "/home/ivanlmj/git/Android-SplashActivity/SplashActivity/app/build/intermediates/res/merged/debug/transition/fade_out.xml",
+        "source": "/home/ivanlmj/git/Android-SplashActivity/SplashActivity/app/src/main/res/transition/fade_out.xml"
+    }
+]

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#404040"
+    tools:context="com.ivanleoncz.SplashActivity.SecondActivity">
+
+    <ImageView
+        android:id="@+id/protoman"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/protoman"
+        android:contentDescription="@string/imagedesc"/>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/protoman"
+        android:text="@string/message"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"/>
+
+    <ImageView
+        android:id="@+id/share"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/share_icon_green"
+        android:contentDescription="@string/imagedesc"
+        android:onClick="sharingContent"/>
+
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/share"
+        android:layout_centerHorizontal="true"
+        android:text="@string/regards"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"/>
+
+    <TableRow
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/gradient_bg">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp"
+            android:contentDescription="@string/imagedesc"
+            android:src="@drawable/stack_overflow"
+            android:tag="https://stackoverflow.com/users/5780109/ivanleoncz"
+            android:onClick="openBrowser"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp"
+            android:contentDescription="@string/imagedesc"
+            android:src="@drawable/server_fault"
+            android:tag="https://serverfault.com/users/356214/ivanleoncz?tab=profile"
+            android:onClick="openBrowser"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp"
+            android:contentDescription="@string/imagedesc"
+            android:src="@drawable/github"
+            android:tag="https://github.com/ivanlmj"
+            android:onClick="openBrowser"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp"
+            android:contentDescription="@string/imagedesc"
+            android:src="@drawable/twitter"
+            android:tag="https://twitter.com/ivanleoncz"
+            android:onClick="openBrowser"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="7dp"
+            android:contentDescription="@string/imagedesc"
+            android:src="@drawable/linkedin"
+            android:tag="https://www.linkedin.com/in/ivanleoncz"
+            android:onClick="openBrowser"/>
+
+    </TableRow>
+
+</RelativeLayout>

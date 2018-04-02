@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">Splash Screen</string>
+    <string name="imagedesc">Project Image</string>
+
+    <!-- MainActivity.java -->
+    <string name="intro"> Hello! </string>
+    <string name="thanks"> Please, wait. </string>
+
+    <!-- SecondActivity.java -->
+    <string name="message">Thanks for running :)!</string>
+    <string name="regards"> \@ivanleoncz </string>
+
+</resources>
