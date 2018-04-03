@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidActivities</string>
+
+    <string name="first_activity_button"> Move to another activity</string>
+    <string name="second_activity_text"> Welcome to Second Activity!</string>
+
+
+</resources>

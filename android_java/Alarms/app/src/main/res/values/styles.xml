@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CustomDialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">170dp</item>
+        <item name='android:maxWidth'>190dp</item>
+        <item name="android:minHeight">60dp</item>
+        <item name="android:maxHeight">80dp</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@color/myBlue</item>
+        <item name="android:bottomDark">@color/myBlue</item>
+        <item name="android:bottomMedium">@color/myBlue</item>
+        <item name="android:centerBright">@color/myBlue</item>
+        <item name="android:centerDark">@color/myBlue</item>
+        <item name="android:centerMedium">@color/myBlue</item>
+        <item name="android:fullBright">@color/myBlue</item>
+        <item name="android:fullDark">@color/myBlue</item>
+        <item name="android:topBright">@color/myBlue</item>
+        <item name="android:topDark">@color/myBlue</item>
+    </style>
+
+
+</resources>
