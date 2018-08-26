@@ -9,12 +9,29 @@
 
   <body>
     <h1>User Registry</h1>
-    <form action="/registry">
-	Name:<input type="text" name="name"></input><br>
-        Birthdate:<input type="text" name="birthdate"></input><br>
-	Profession:<input type="text" name="profession"></input><br>
-	E-Mail:<input type="text" name="email"></input><br>
-	Country:<input type="text" name="country"><br>
+    <form action="/registry" method="post">
+	<table>
+	  <tr>
+	    <td>Name:</td>
+	    <td><input type="text" name="name"></input></td>
+	  </tr>
+	  <tr>
+	    <td>Birthdate:</td>
+	    <td><input type="text" name="birthdate"></input></td>
+	  </tr>
+	  <tr>
+	    <td>Profession:</td>
+	    <td><input type="text" name="profession"></input></td>
+	  </tr>
+	  <tr>
+	    <td>E-Mail:</td>
+	    <td><input type="text" name="email"></input></td>
+	  </tr>
+	  <tr>
+	    <td>Country:</td>
+	    <td><input type="text" name="country"></input></td>
+	  </tr>
+	<table>
 	<input type="submit" value="Send">
     </form>
     <p><a href="/index">Back</a></p>
