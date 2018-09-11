@@ -3,17 +3,18 @@ function welcome() {
 };
 
 function validateForm() {
-    let empty_field = false;
 
-    let inputs = document.forms["form_user"].getElementsByTagName("input");
+    var empty_fields = false;
+    var inputs = document.forms["form_user"].getElementsByTagName("input");
+
     for (index = 0; index < inputs.length; index++) {
         if (inputs[index].value == null || inputs[index].value == "") {
-	    empty_field = true;
+	    empty_fields = true;
 	    break;
 	}
     }
 
-    if (empty_field = true) {
+    if (empty_fields == true) {
         alert("Please, review empty fields.");
 	return false;
     } else {
