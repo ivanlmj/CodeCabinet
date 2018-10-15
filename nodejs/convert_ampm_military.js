@@ -1,5 +1,5 @@
 
-s = "07:05:45PM"
+s = "12:40:22AM"
 s_array = s.split(':');
 
 console.log(`12-hour time:  ${s}`);
@@ -9,10 +9,15 @@ var minute = s_array[1];
 var seconds = s_array[2].slice(0, 2);
 var day_period = s_array[2].slice(-2);
 
-if ( day_period == "PM") {
-    var hour_int = Number(hour);
-    var hour_24 = hour_int + 12;
-    hour = hour_24.toString();
+var hour_int = Number(hour);
+
+if ( day_period == "PM" && hour_int != 12) {
+    var hour_new = hour_int + 12;
+    hour = hour_new.toString();
+} else if ( day_period == "AM" && hour_int == 12) {
+    var hour_new = hour_int - 12;
+    hour = hour_new.toString();
+    hour += "0";
 }
 
 console.log(`Military Time: ${hour}:${minute}:${seconds}`);
