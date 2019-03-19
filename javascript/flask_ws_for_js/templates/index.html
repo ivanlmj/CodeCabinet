@@ -1,0 +1,31 @@
+<html>
+
+  <head>
+  	<title>Simple Page</title>
+  	<style type="text/css">
+  		#greeting {
+  			display: inline;
+  		}
+  	</style> 
+  </head>
+
+  <body >
+  	<h1 id="greeting" onmouseover="new_color()" onmouseout="old_color()">Hello!</h1>
+  	<p>You have a message!</p>
+  	<input type="button" value="Show Message" onclick="message()">
+
+  	<script type="text/javascript">
+  		function message() {
+  			alert("Be loyal to your values!");
+  		}
+  		function new_color() {
+  			document.getElementById("greeting").style.color = 'red';
+  		}
+  		function old_color() {
+  			document.getElementById("greeting").style.color = 'black';
+  		}
+  	</script>
+
+  </body>
+
+</html>
