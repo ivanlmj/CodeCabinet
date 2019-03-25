@@ -1,9 +1,13 @@
 var express = require('express');
-var app = express();
+var path = require('path');
 var port = 3000;
 
+var app = express();
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
 app.get('/', function(req, res) {
-    res.send('Hello World!');
+    res.render('index', {username: 'ivanleoncz'});
 });
 
 app.get('/username/:user_name', function(req, res) {
