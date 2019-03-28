@@ -9,10 +9,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 var tasks = [
-	{id: '1', task: "Create REST API with ExpressJS", user:"ivanleonczBR"},
-	{id: '2', task: "Build Front-end in AngularJS", user:"erikaUS"},
-	{id: '3', task: "Integrate Mobile App with REST API", user:"emiliaDE"},
-	{id: '4', task: "Design Tests for Mobile App", user:"charlesUK"}
+	{id: '1', title: "Create REST API with ExpressJS", user:"ivanleonczBR"},
+	{id: '2', title: "Build Front-end in AngularJS", user:"erikaUS"},
+	{id: '3', title: "Integrate Mobile App with REST API", user:"emiliaDE"},
+	{id: '4', title: "Design Tests for Mobile App", user:"charlesUK"}
 ];
 
 router.get('/tasks', function(req, res) {
@@ -29,19 +29,19 @@ router.get('/tasks/:task_id', function(req, res) {
 router.post('/tasks/', function(req, res) {
     console.log('Tasks (POST): ' + req.body.task);
     const idx = parseInt(tasks[tasks.length - 1].id) + 1;
-    const task_desc = req.body.task;
-    const task_user = req.body.user;
-    tasks.push({id: idx.toString(), task:task_desc, user:task_user});
+    const title = req.body.title;
+    const user = req.body.user;
+    tasks.push({id: idx.toString(), title:title, user:user});
     res.send("Done!");
 });
 
 router.put('/tasks/:task_id', function(req, res) {
     console.log('Tasks (PUT): ' + req.params.task_id);
     const idx = req.params.task_id - 1;
-    const task_desc = req.body.task;
-    const task_user = req.body.user;
-    tasks[idx].task = task_desc;
-    tasks[idx].user = task_user;
+    const title = req.body.title;
+    const user = req.body.user;
+    tasks[idx].title = title;
+    tasks[idx].user = user;
     res.send("Done!");
 });
 
