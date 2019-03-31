@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const port = 3000;
 
 var app = express();
 var router = express.Router();
@@ -53,10 +52,4 @@ router.delete('/tasks/:task_id', function(req, res) {
 
 app.use('/api/v1.0', router);
 
-app.listen(port, function() {
-    console.log("Server is running: http://localhost:%s", port);
-});
-
-
-
-
+module.exports = app;
