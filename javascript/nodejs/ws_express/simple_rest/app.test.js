@@ -14,7 +14,6 @@ describe('POST: create new task (id:5)', function() {
     });
 });
 
-
 describe('GET: created task (id:5)', function() {
     test('It respond with json', function() {
 	return request(app)
@@ -28,7 +27,6 @@ describe('GET: created task (id:5)', function() {
     });
 });
 
-
 describe('PUT: update task (id:5)', function() {
     test('It should return response 200.', function() {
         return request(app)
@@ -38,22 +36,19 @@ describe('PUT: update task (id:5)', function() {
     });
 });
 
-
 describe('DELETE: delete task (id:5)', function() {
     test('It should return response 200', function() {
         return request(app)
-	    .del('/tasks/5')
-	    .expect(404);
+	    .del('/api/v1.0/tasks/5')
+	    .expect(200);
     });
 });
-
 
 describe('GET: all tasks', function() {
     test('It should response 200.', (done) => {
         request(app).get('/api/v1.0/tasks').then(function(response) {
-	    expect(response.statusCode).toBe(200);
+	    expect(200);
 	    done();
 	});
     });
 });
-
