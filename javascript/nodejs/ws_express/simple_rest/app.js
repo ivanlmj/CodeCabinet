@@ -15,18 +15,17 @@ var tasks = [
 ];
 
 router.get('/tasks', function(req, res) {
-    console.log('Tasks (GET): ALL');
     res.send(tasks);
 });
 
 router.get('/tasks/:task_id', function(req, res) {
-    console.log('Tasks (GET): ' + req.params.task_id);
-    // tasks start in 1, not 0
+    // tasks start in 0, not 1, for Array context
     res.send(tasks[req.params.task_id - 1]);
 });
 
 router.post('/tasks/', function(req, res) {
-    console.log('Tasks (POST): ' + req.body.task);
+    // tasks start in 0, not 1, for Array context
+    // getting last Array record for generating an id for the new task
     const idx = parseInt(tasks[tasks.length - 1].id) + 1;
     const title = req.body.title;
     const user = req.body.user;
@@ -35,7 +34,7 @@ router.post('/tasks/', function(req, res) {
 });
 
 router.put('/tasks/:task_id', function(req, res) {
-    console.log('Tasks (PUT): ' + req.params.task_id);
+    // tasks start in 0, not 1, for Array context
     const idx = req.params.task_id - 1;
     const title = req.body.title;
     const user = req.body.user;
@@ -45,7 +44,7 @@ router.put('/tasks/:task_id', function(req, res) {
 });
 
 router.delete('/tasks/:task_id', function(req, res) {
-    console.log('Tasks (DELETE): ' + req.params.task_id);
+    // tasks start in 0, not 1, for Array context
     tasks.pop(parseInt(req.params.task_id) -1)
     res.send("Done!");
 });
